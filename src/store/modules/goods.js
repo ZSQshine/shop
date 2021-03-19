@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import {} from '../../utils/request'
-=======
 import {goodsList,goodsCount} from '../../utils/request'
->>>>>>> 330bee7... 第二次提交
 const state = {
     goodsList: [],
     // 每页条数
@@ -15,11 +11,7 @@ const state = {
 
 const mutations = {
     changeGoodsList(state, arr) {
-<<<<<<< HEAD
-        state.specList = arr;
-=======
         state.goodsList = arr;
->>>>>>> 330bee7... 第二次提交
     },
     // 总数
     changeTotal(state, num) {
@@ -36,11 +28,7 @@ const actions = {
     // 请求获取用户列表
     goodsListActions(context) {
         // 声明要传递的参数
-<<<<<<< HEAD
-        let param = {
-=======
         var param = {
->>>>>>> 330bee7... 第二次提交
             size: context.state.size,
             page: context.state.page,
         }
@@ -67,6 +55,12 @@ const actions = {
     pageActions(context, page) {
         // context.state.page = page;
         context.commit('changePage', page);
+    },
+    // 获取全部的数据
+    allActions(context){
+        goodsList().then(res=>{
+            context.commit('changeGoodsList',res.data.list)
+        })
     }
 
 }

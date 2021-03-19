@@ -25,14 +25,11 @@ const mutations = {
 }
 
 const actions = {
-<<<<<<< HEAD
-=======
     allSpecActions(context){
         specList().then(res=>{
             context.commit('changeSpecList',res.data.list);
         })
     },
->>>>>>> 330bee7... 第二次提交
     // 请求获取用户列表
     specListActions(context) {
         // 声明要传递的参数

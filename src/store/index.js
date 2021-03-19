@@ -10,6 +10,9 @@ import manager from './modules/manager'
 import cate from './modules/cate'
 import spec from './modules/spec'
 import goods from './modules/goods'
+import vip from './modules/vip'
+import banner from './modules/banner'
+import second from './modules/second'
 const store = new Vuex.Store({
     state,
     mutations,
@@ -22,6 +25,9 @@ const store = new Vuex.Store({
         cate,
         spec,
         goods,
+        vip,
+        banner,
+        second,
     }
 })
 

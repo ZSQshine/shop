@@ -1,6 +1,6 @@
 <template>
   <div>
-      <el-button type='primary' @click="add">添  加</el-button>
+      <!-- <el-button type='primary' @click="add">添  加</el-button> -->
       <!--  -->
       <v-op :info='info' ref='add'></v-op>
       <!--  -->
@@ -16,8 +16,7 @@ export default {
         return{
             info:{
                 isShow:false,
-                isAdd:true,
-                title:'添加商品'
+                title:'会员修改'
             }
         }
     },
@@ -27,8 +26,6 @@ export default {
         },
         edit(id){
             this.info.isShow = true;
-            this.info.isAdd = false;
-            this.info.title = '编辑商品';
             this.$refs.add.getOne(id);
         }
     },
@@ -36,7 +33,6 @@ export default {
         vOp,
         vList,
     }
-
 }
 </script>
 

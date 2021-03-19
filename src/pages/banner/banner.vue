@@ -17,26 +17,26 @@ export default {
             info:{
                 isShow:false,
                 isAdd:true,
-                title:'添加商品'
+                title:'添加轮播图'
             }
         }
     },
     methods:{
         add(){
             this.info.isShow = true;
+            this.info.isAdd = true;
         },
         edit(id){
             this.info.isShow = true;
             this.info.isAdd = false;
-            this.info.title = '编辑商品';
+            this.info.title = '编辑轮播图'
             this.$refs.add.getOne(id);
         }
     },
     components:{
         vOp,
-        vList,
+        vList
     }
-
 }
 </script>
 

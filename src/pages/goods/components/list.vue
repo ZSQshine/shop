@@ -1,17 +1,4 @@
 <template>
-<<<<<<< HEAD
-  
-</template>
-
-<script>
-export default {
-
-}
-</script>
-
-<style>
-
-=======
   <div>
     <el-table
       :data="tableData"
@@ -123,5 +110,4 @@ export default {
 img{
     width:100px
 }
->>>>>>> 330bee7... 第二次提交
 </style>

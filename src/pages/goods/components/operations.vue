@@ -1,17 +1,4 @@
 <template>
-<<<<<<< HEAD
-  
-</template>
-
-<script>
-export default {
-
-}
-</script>
-
-<style>
-
-=======
   <div>
     <el-dialog :title="info.title" :visible.sync="info.isShow" @opened="opened">
       <el-form :model="form">
@@ -307,5 +294,4 @@ export default {
   height: 178px;
   display: block;
 }
->>>>>>> 330bee7... 第二次提交
 </style>

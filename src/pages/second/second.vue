@@ -11,32 +11,36 @@
 <script>
 import vOp from './components/operations'
 import vList from './components/list'
+import {getSecond} from '../../utils/request'
 export default {
     data(){
         return{
             info:{
                 isShow:false,
                 isAdd:true,
-                title:'添加商品'
+                title:'添加活动'
             }
         }
     },
     methods:{
         add(){
             this.info.isShow = true;
+            this.info.isAdd = true;
         },
         edit(id){
             this.info.isShow = true;
             this.info.isAdd = false;
-            this.info.title = '编辑商品';
+            this.info.title = '编辑活动'
             this.$refs.add.getOne(id);
         }
     },
     components:{
         vOp,
-        vList,
+        vList
+    },
+    mounted(){
+     
     }
-
 }
 </script>
 

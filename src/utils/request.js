@@ -299,16 +299,6 @@ export const delSpec = (data)=>{
 }
 // 添加商品
 export const addGoods = (data)=>{
-<<<<<<< HEAD
-    return axios({
-        method:'post',
-        url:baseUrl + '/api/goodsadd',
-        data:qs.stringify(data)
-
-    })
-}
-// 商品规格列表
-=======
     let form = new FormData();
     for (let i in data){
         form.append(i,data[i]);
@@ -321,7 +311,6 @@ export const addGoods = (data)=>{
     })
 }
 // 商品列表
->>>>>>> 330bee7... 第二次提交
 export const goodsList = (params)=>{
     return axios({
         method:'get',
@@ -339,23 +328,13 @@ export const goodsCount = ()=>{
 export const onegoods = (params)=>{
     return axios({
         method:'get',
-<<<<<<< HEAD
-        url:baseUrl + ' /api/goodsinfo',
-=======
         url:baseUrl + '/api/goodsinfo',
->>>>>>> 330bee7... 第二次提交
         params
     })
 }
 
 // 修改
 export const editGoods = (data)=>{
-<<<<<<< HEAD
-    return axios({
-        method:'post',
-        url:baseUrl + '/api/goodsedit',
-        data:qs.stringify(data)
-=======
     let form = new FormData();
     for (let i in data){
         form.append(i,data[i]);
@@ -364,7 +343,6 @@ export const editGoods = (data)=>{
         method:'post',
         url:baseUrl + '/api/goodsedit',
         data:form
->>>>>>> 330bee7... 第二次提交
 
     })
 }
@@ -373,6 +351,139 @@ export const delGoods = (data)=>{
     return axios({
         method:'post',
         url:baseUrl + '/api/goodsdelete',
+        data:qs.stringify(data)
+
+    })
+}
+
+// 获取会员列表
+export const getVip = ()=>{
+    return axios({
+        method:'get',
+        url:baseUrl + '/api/memberlist',
+        
+    })
+}
+
+// 获取一条
+export const oneVip = (params)=>{
+    return axios({
+        method:'get',
+        url:baseUrl + '/api/memberinfo',
+        params
+    })
+}
+// 编辑会员
+
+export const editVip = (data)=>{
+    return axios({
+        method:'post',
+        url:baseUrl + '/api/memberedit',
+        data:qs.stringify(data)
+
+    })
+}
+
+// 添加轮播图
+export const addBanner = (data)=>{
+    let form = new FormData();
+    for(let i in data){
+        form.append(i,data[i])
+    }
+    return axios({
+        method:'post',
+        url:baseUrl + '/api/banneradd',
+        data:form
+
+    })
+}
+
+// 轮播图列表
+export const getBanner = ()=>{
+    return axios({
+        method:'get',
+        url:baseUrl + '/api/bannerlist',
+        
+    })
+}
+
+// 轮播图详情
+export const oneBanner = (params)=>{
+    return axios({
+        method:'get',
+        url:baseUrl + '/api/bannerinfo',
+        params
+    })
+}
+
+// 编辑轮播图
+export const editBanner = (data)=>{
+    let form = new FormData();
+    for(let i in data){
+        form.append(i,data[i])
+    }
+    return axios({
+        method:'post',
+        url:baseUrl + '/api/banneredit',
+        data:form
+
+    })
+}
+
+// 删除
+export const delBanner = (data)=>{
+    return axios({
+        method:'post',
+        url:baseUrl + '/api/bannerdelete',
+        data:qs.stringify(data)
+
+    })
+}
+
+// 添加活动
+export const addSecond = (data)=>{
+    // let form = new FormData();
+    // for(let i in data){
+    //     form.append(i,data[i])
+    // }
+    return axios({
+        method:'post',
+        url:baseUrl + '/api/seckadd',
+        data:qs.stringify(data)
+
+    })
+}
+
+// 活动列表
+export const getSecond = ()=>{
+    return axios({
+        methods:'get',
+        url:baseUrl + '/api/secklist',
+    })
+}
+// 获取一条
+export const oneSecond = (params)=>{
+    return axios({
+        methods:'get',
+        url:baseUrl + '/api/seckinfo',
+        params
+    })
+}
+// 编辑
+export const editSecond = (data)=>{
+    return axios({
+        method:'post',
+        url:baseUrl + '/api/seckedit',
+        data:qs.stringify(data)
+
+    })
+}
+
+// 删除活动
+export const delSecond = (data)=>{
+    return axios({
+        method:'post',
+        url:baseUrl + '/api/seckdelete',
         data:qs.stringify(data)
 
     })

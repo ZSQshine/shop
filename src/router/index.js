@@ -14,6 +14,9 @@ import manager from '../pages/manager/manager'
 import cate from '../pages/cate/cate'
 import spec from '../pages/speci/spec'
 import goods from '../pages/goods/goods'
+import vip from '../pages/vip/vip'
+import banner from '../pages/banner/banner'
+import seckill from '../pages/second/second'
  
 export default new Router({
   routes: [
@@ -60,6 +63,21 @@ export default new Router({
           path:'goods',
           component:goods,
           name:'商品管理'
+        },
+        {
+          path:'vip',
+          component:vip,
+          name:'会员管理'
+        },
+        {
+          path:'banner',
+          component:banner,
+          name:'轮播图管理'
+        },
+        {
+          path:'seckill',
+          component:seckill,
+          name:'轮播图管理'
         }
       ]
     },
